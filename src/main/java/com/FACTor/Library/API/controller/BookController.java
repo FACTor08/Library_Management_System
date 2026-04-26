@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
-@RequestMapping("/local-lib")
 @RestController
 public class BookController {
     @Autowired

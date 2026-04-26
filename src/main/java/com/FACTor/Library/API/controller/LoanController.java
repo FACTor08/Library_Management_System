@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/local-lib")
 public class LoanController {
     @Autowired
     private LoanLogic logic;

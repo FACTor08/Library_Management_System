@@ -43,10 +43,10 @@ public class Security {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/local-lib/login").permitAll()
-                        .requestMatchers("/local-lib/user-signup").permitAll()
-                        .requestMatchers("/local-lib/administrator/admin-signup").permitAll()
-                        .requestMatchers("/local-lib/administrator/*").hasRole("ADMIN")
+                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/user-signup").permitAll()
+                        .requestMatchers("/administrator/admin-signup").permitAll()
+                        .requestMatchers("/administrator/*").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
