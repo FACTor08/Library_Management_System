@@ -26,7 +26,7 @@ public class LoanController {
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/administrator/home/loan")
+    @GetMapping("/administrator/home/loan-status")
     public ResponseEntity<List<Loan>> allLoanStatus(){
         List<Loan> loans = logic.getLoans();
         return ResponseEntity.ok(loans);
