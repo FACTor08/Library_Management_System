@@ -34,7 +34,7 @@ public class LoanLogic {
     loan.setReturnedTime(LocalDateTime.now());
             repo.save(loan);
           return loan.getBooks().getTitle() + " has been returned by User " + loan.getUser().getLibraryId()
-                  + "at " + loan.getReturnedTime();
+                  + " at " + loan.getReturnedTime();
 
     }
     public List<Loan> getLoans(){
