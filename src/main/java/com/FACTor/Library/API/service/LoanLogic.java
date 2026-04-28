@@ -27,13 +27,13 @@ public class LoanLogic {
           loan.setStatus(Status.BORROWED);
           loan.setBorrowedTime(LocalDateTime.now());
           repo.save(loan);
-          return loan.getUser().getLibraryId() + "borrowed " + loan.getBooks().getIsbn()
+          return "User " + loan.getUser().getLibraryId() + " has borrowed " + loan.getBooks().getTitle()
                   + "at "+ loan.getBorrowedTime();
       }else
             loan.setStatus(Status.RETURNED);
     loan.setReturnedTime(LocalDateTime.now());
             repo.save(loan);
-          return loan.getBooks().getIsbn() + " has been returned by " + loan.getUser().getLibraryId()
+          return loan.getBooks().getTitle() + " has been returned by User " + loan.getUser().getLibraryId()
                   + "at " + loan.getReturnedTime();
 
     }
