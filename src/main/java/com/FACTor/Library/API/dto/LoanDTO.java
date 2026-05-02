@@ -13,5 +13,5 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class LoanDTO {
     private String libraryId;
-    private String bookId;
+    private String bookTitle;
    }

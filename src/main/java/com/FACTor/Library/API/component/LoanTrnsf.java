@@ -22,8 +22,8 @@ public class LoanTrnsf {
         User user = userRepo.findByLibraryId(data.getLibraryId())
                         .orElseThrow(()-> new RuntimeException("User Not Found"));
 
-        Books book = booksRepo.findByIsbn(data.getBookId())
-                        .orElseThrow(()-> new RuntimeException("User Not Found"));
+        Books book = booksRepo.findByTitleIgnoreCase(data.getBookTitle())
+                        .orElseThrow(()-> new RuntimeException("Book Not Found"));
 
         loan.setUser(user);
         loan.setBooks(book);
