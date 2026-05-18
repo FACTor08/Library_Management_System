@@ -2,9 +2,6 @@
  
 A RESTful Library Management API built with Spring Boot, featuring JWT authentication, role-based access control, and full book loan management.
  
-🔗 **Live API:** https://local-library-production-9e67.up.railway.app
- 
----
  
 ## 🛠️ Tech Stack
  
