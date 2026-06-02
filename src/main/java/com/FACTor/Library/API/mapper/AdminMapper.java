@@ -1,4 +1,4 @@
-package com.FACTor.Library.API.component;
+package com.FACTor.Library.API.mapper;
 
 import com.FACTor.Library.API.dto.AdminDTO;
 import com.FACTor.Library.API.entity.Role;
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.util.Random;
 @Component
-public class AdminTrnsf {
+public class AdminMapper {
 
     private final PasswordEncoder encoder;
 
-    public AdminTrnsf(PasswordEncoder encoder) {
+    public AdminMapper(PasswordEncoder encoder) {
         this.encoder = encoder;
     }
         private final Random random = new Random();

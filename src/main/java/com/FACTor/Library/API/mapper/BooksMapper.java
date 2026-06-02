@@ -1,11 +1,11 @@
-package com.FACTor.Library.API.component;
+package com.FACTor.Library.API.mapper;
 
 import com.FACTor.Library.API.dto.BooksDTO;
 import com.FACTor.Library.API.entity.Books;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BooksTrnsf {
+public class BooksMapper {
     public Books bookTrnsf(BooksDTO data){
         Books book = new Books();
          book.setTitle(data.getTitle());

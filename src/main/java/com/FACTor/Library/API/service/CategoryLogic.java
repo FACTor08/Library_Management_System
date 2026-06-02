@@ -1,7 +1,7 @@
 package com.FACTor.Library.API.service;
 
 import com.FACTor.Library.API.dto.CategoryDTO;
-import com.FACTor.Library.API.component.CategoryTrnsf;
+import com.FACTor.Library.API.mapper.CategoryMapper;
 import com.FACTor.Library.API.entity.Category;
 import com.FACTor.Library.API.repository.CategoryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class CategoryLogic {
     @Autowired
     private CategoryRepo repo;
     @Autowired
-    private CategoryTrnsf transfer;
+    private CategoryMapper transfer;
 
     public String newCategory(CategoryDTO data){
         Category category = transfer.categoryTrnsf(data);

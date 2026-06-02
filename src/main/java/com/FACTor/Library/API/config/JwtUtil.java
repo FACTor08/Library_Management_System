@@ -1,4 +1,4 @@
-package com.FACTor.Library.API.component;
+package com.FACTor.Library.API.config;
 
 import com.FACTor.Library.API.entity.User;
 import io.jsonwebtoken.*;

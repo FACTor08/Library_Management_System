@@ -1,4 +1,4 @@
-package com.FACTor.Library.API.component;
+package com.FACTor.Library.API.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

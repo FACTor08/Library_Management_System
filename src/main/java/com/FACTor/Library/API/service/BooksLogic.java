@@ -1,7 +1,7 @@
 package com.FACTor.Library.API.service;
 
 import com.FACTor.Library.API.dto.BooksDTO;
-import com.FACTor.Library.API.component.BooksTrnsf;
+import com.FACTor.Library.API.mapper.BooksMapper;
 import com.FACTor.Library.API.entity.Author;
 import com.FACTor.Library.API.entity.Books;
 import com.FACTor.Library.API.entity.Category;
@@ -18,7 +18,7 @@ import java.util.List;
 @Transactional
 public class BooksLogic {
     @Autowired
-    private BooksTrnsf transfer;
+    private BooksMapper transfer;
     @Autowired
     private BooksRepo repo;
     @Autowired

@@ -1,4 +1,4 @@
-package com.FACTor.Library.API.component;
+package com.FACTor.Library.API.mapper;
 
 import com.FACTor.Library.API.dto.LoanDTO;
 import com.FACTor.Library.API.entity.Books;
@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class LoanTrnsf {
+public class LoanMapper {
     @Autowired
     private UserRepo userRepo;
     @Autowired

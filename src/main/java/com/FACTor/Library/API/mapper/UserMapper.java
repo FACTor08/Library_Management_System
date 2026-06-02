@@ -1,4 +1,4 @@
-package com.FACTor.Library.API.component;
+package com.FACTor.Library.API.mapper;
 
 import com.FACTor.Library.API.dto.UserDTO;
 import com.FACTor.Library.API.entity.Role;
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.Random;
 
 @Component
-public class UserTrnsf {
+public class UserMapper {
    @Autowired
     private PasswordEncoder encoder;
 

@@ -1,7 +1,7 @@
 package com.FACTor.Library.API.service;
 
 import com.FACTor.Library.API.dto.LoanDTO;
-import com.FACTor.Library.API.component.LoanTrnsf;
+import com.FACTor.Library.API.mapper.LoanMapper;
 import com.FACTor.Library.API.entity.Loan;
 import com.FACTor.Library.API.entity.Status;
 import com.FACTor.Library.API.repository.LoanRepo;
@@ -19,7 +19,7 @@ public class LoanLogic {
     private LoanRepo repo;
 
     @Autowired
-    private LoanTrnsf transfer;
+    private LoanMapper transfer;
 
     public String loanStatus(LoanDTO data, Status status){
         Loan loan = transfer.loanTrnsf(data);

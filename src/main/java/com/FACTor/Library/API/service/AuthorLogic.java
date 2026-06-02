@@ -1,7 +1,7 @@
 package com.FACTor.Library.API.service;
 
 import com.FACTor.Library.API.dto.AuthorDTO;
-import com.FACTor.Library.API.component.AuthorTrnsf;
+import com.FACTor.Library.API.mapper.AuthorMapper;
 import com.FACTor.Library.API.entity.Author;
 import com.FACTor.Library.API.entity.Books;
 import com.FACTor.Library.API.repository.AuthorRepo;
@@ -21,7 +21,7 @@ public class AuthorLogic {
     @Autowired
     private BooksRepo booksRepo;
     @Autowired
-    private AuthorTrnsf transfer;
+    private AuthorMapper transfer;
 
         public String addAuthor(AuthorDTO data){
             Author author = transfer.dataTrnsf(data);

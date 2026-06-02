@@ -1,6 +1,5 @@
 package com.FACTor.Library.API.config;
 
-import com.FACTor.Library.API.component.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -2,7 +2,7 @@ package com.FACTor.Library.API.service;
 
 import com.FACTor.Library.API.dto.AdminDTO;
 import com.FACTor.Library.API.entity.User;
-import com.FACTor.Library.API.component.AdminTrnsf;
+import com.FACTor.Library.API.mapper.AdminMapper;
 import com.FACTor.Library.API.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class AdminLogic {
     @Autowired
     private UserRepo repo;
     @Autowired
-    private AdminTrnsf transfer;
+    private AdminMapper transfer;
 
     public String addMember(AdminDTO admin) {
         if (repo.findByEmailIgnoreCase(admin.getEmail()).isPresent()) {

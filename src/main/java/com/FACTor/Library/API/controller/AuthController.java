@@ -1,6 +1,6 @@
 package com.FACTor.Library.API.controller;
 
-import com.FACTor.Library.API.component.JwtUtil;
+import com.FACTor.Library.API.config.JwtUtil;
 import com.FACTor.Library.API.dto.LoginRequest;
 import com.FACTor.Library.API.entity.User;
 import com.FACTor.Library.API.service.LoginLogic;

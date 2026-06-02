@@ -1,7 +1,7 @@
 package com.FACTor.Library.API.service;
 
 import com.FACTor.Library.API.dto.UserDTO;
-import com.FACTor.Library.API.component.UserTrnsf;
+import com.FACTor.Library.API.mapper.UserMapper;
 import com.FACTor.Library.API.entity.User;
 import com.FACTor.Library.API.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ public class UserLogic {
     @Autowired
     private UserRepo repo;
     @Autowired
-    private UserTrnsf transfer;
+    private UserMapper transfer;
 
     public String addMember(UserDTO user){
         if (repo.findByEmailIgnoreCase(user.getEmail()).isPresent()){
