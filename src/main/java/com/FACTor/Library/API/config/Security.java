@@ -1,5 +1,6 @@
 package com.FACTor.Library.API.config;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,13 +15,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-
+@RequiredArgsConstructor
 public class Security {
     private final JwtFilter jwtFilter;
-
-    public Security(JwtFilter jwtFilter) {
-        this.jwtFilter = jwtFilter;
-    }
 
     @Bean
     public AuthenticationManager authenticationManager(

@@ -3,6 +3,7 @@ package com.FACTor.Library.API.service;
 import com.FACTor.Library.API.dto.LoginRequest;
 import com.FACTor.Library.API.entity.User;
 import com.FACTor.Library.API.repository.UserRepo;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -11,13 +12,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class LoginLogic {
     private final PasswordEncoder encoder;
 
-    public LoginLogic(PasswordEncoder encoder) {
-        this.encoder = encoder;
-    }
-@Autowired
+    @Autowired
 private UserRepo repo;
 
     public User login(LoginRequest request){

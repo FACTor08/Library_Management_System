@@ -4,17 +4,16 @@ import com.FACTor.Library.API.config.JwtUtil;
 import com.FACTor.Library.API.dto.LoginRequest;
 import com.FACTor.Library.API.entity.User;
 import com.FACTor.Library.API.service.LoginLogic;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class AuthController {
-@Autowired
-private JwtUtil jwtUtil;
-@Autowired
-private LoginLogic logic;
+private final JwtUtil jwtUtil;
+private final LoginLogic logic;
 
     @PostMapping("/login")
     public String login(@RequestBody LoginRequest request){

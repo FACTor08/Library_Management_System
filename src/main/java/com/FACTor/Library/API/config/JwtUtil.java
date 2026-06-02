@@ -12,7 +12,6 @@ import java.util.Date;
 public class JwtUtil {
     private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     public String generateToken(User user) {
-
         return Jwts.builder()
                 .setSubject(user.getLibraryId())
                 .setIssuedAt(new Date())
